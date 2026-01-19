@@ -71,12 +71,3 @@ python3 correctness_evaluation.py
 ```bash
 python3 check_env.py
 ```
-
-## Tips for reproducibility
-- Configure dataset lists, tiling size, and version names in `constants.py` before running large sweeps.
-- Large datasets consume significant disk space; comment out unused entries if needed.
-- Every evaluator warms each kernel once to trigger Numba’s JIT; the warm-up time is reported separately so you can distinguish compilation overhead from steady-state throughput.
-- `perf_monitor.PerfMonitor` requires `psutil`. If it is missing, the scripts still run but skip system-metric logging.
-
-## Suggested project title
-**CPU Convolution Lab: Benchmarking Classic-to-Winograd Kernels on Real Datasets**
